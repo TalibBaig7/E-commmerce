@@ -5,6 +5,7 @@ import { ShoppingCart, Search, User, Menu, X, Trash2, Tag } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import Footer from "./Footer";
 
+
 export default function ShoppingCartPage() {
   const [cartItems, setCartItems] = useState([
     {
@@ -62,12 +63,14 @@ export default function ShoppingCartPage() {
 
   return (
     <div className="min-h-screen bg-white">
+
       <div className="bg-black text-white text-center py-2 px-4 text-sm">
         Sign up and get 20% off to your first order.{" "}
         <span className="underline cursor-pointer">Sign Up Now</span>
         <button className="absolute right-4 top-2 md:top-2">
           <X size={16} />
         </button>
+
       </div>
 
       <header className="border-b px-4 md:px-8 py-4">
@@ -183,7 +186,6 @@ export default function ShoppingCartPage() {
                   <span>Total</span>
                   <span className="font-bold">${total}</span>
                 </div>
-                <Footer />t 
               </div>
 
               <div className="flex gap-3">
@@ -207,9 +209,13 @@ export default function ShoppingCartPage() {
                 <span>→</span>
               </button>
             </div>
+           
+
           </div>
         </div>
       </main>
+      <Footer />
     </div>
+    
   );
 }
