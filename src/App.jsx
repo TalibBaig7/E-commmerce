@@ -1,27 +1,34 @@
+import { useEffect } from "react";
+import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
-import Footer from "./Footer";
-import ProductDetailPage from "./Productdetail";
-import Casual from "./Casual";
-import ShoppingCartPage from "./ShoppingCartPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductdetailPage from "./Productdetail"; // ✅ Components/ HATA DO!
+import Casual from "./Casual"; // ✅ Components/ HATA DO!
+import ShoppingCartPage from "./ShoppingCartPage"; // ✅ Components/ HATA DO!
+import Layout from "./Components/Layout";
 
-function HomePage() {
-  return (
-    <div>
-      <Home />
-      <Footer />
-    </div>
-  );
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/product-detail" element={<ProductDetailPage />} />
-      <Route path="/casual" element={<Casual />} />
-      <Route path="/cart" element={<ShoppingCartPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/product-detail" element={<ProductdetailPage />} />
+          <Route path="/casual" element={<Casual />} />
+          <Route path="/cart" element={<ShoppingCartPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

@@ -8,7 +8,6 @@ import {
   Plus,
 } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
-import Footer from "./Footer";
 
 export default function ProductDetailPage() {
   const navigate = useNavigate();
@@ -103,37 +102,8 @@ export default function ProductDetailPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-bold">SHOP.CO</div>
-            <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-black">
-                Shop
-              </Link>
-              <a href="#" className="text-gray-700 hover:text-black">
-                On Sale
-              </a>
-              <a href="#" className="text-gray-700 hover:text-black">
-                New Arrivals
-              </a>
-              <a href="#" className="text-gray-700 hover:text-black">
-                Brands
-              </a>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <button className="p-2">
-                <Heart size={20} />
-              </button>
-              <button className="p-2" onClick={() => navigate("/cart")}>
-                <ShoppingCart size={20} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+    <div>
+      {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center text-sm text-gray-500">
           <Link to="/" className="hover:text-black">
@@ -152,6 +122,7 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
+      {/* Product Details */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="flex gap-4">
@@ -273,6 +244,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
+        {/* Reviews Section */}
         <div className="mt-16">
           <div className="border-b border-gray-200">
             <div className="flex gap-8">
@@ -339,6 +311,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
+        {/* Related Products */}
         {(activeTab === "details" || activeTab === "faq") && (
           <div className="mt-16">
             <h2 className="text-3xl font-bold text-center mb-8">
@@ -373,7 +346,6 @@ export default function ProductDetailPage() {
           </div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }

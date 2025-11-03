@@ -1,18 +1,12 @@
-// Casual.jsx
 import React, { useState } from "react";
 import {
   ChevronDown,
   ChevronRight,
   SlidersHorizontal,
   X,
-  Search,
-  ShoppingCart,
-  User,
   ChevronLeft,
 } from "lucide-react";
-
 import { useNavigate, Link } from "react-router-dom";
-import Footer from "./Footer";
 
 export default function CategoryPage() {
   const navigate = useNavigate();
@@ -287,66 +281,7 @@ export default function CategoryPage() {
   );
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b border-gray-200 bg-white sticky top-0 z-40">
-        <div className="bg-black text-white text-center py-2 text-sm">
-          Sign up and get 20% off your first order.{" "}
-          <span className="underline cursor-pointer">Sign Up Now</span>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setShowMobileFilters(true)}
-                className="lg:hidden"
-              >
-                <SlidersHorizontal size={20} />
-              </button>
-              <div className="text-2xl font-bold">SHOP.CO</div>
-            </div>
-            <nav className="hidden md:flex space-x-6">
-              <a
-                href="#"
-                className="text-gray-700 hover:text-black flex items-center gap-1"
-              >
-                Shop <ChevronDown size={16} />
-              </a>
-              <a href="#" className="text-gray-700 hover:text-black">
-                On Sale
-              </a>
-              <a href="#" className="text-gray-700 hover:text-black">
-                New Arrivals
-              </a>
-              <a href="#" className="text-gray-700 hover:text-black">
-                Brands
-              </a>
-            </nav>
-            <div className="flex items-center gap-4">
-              <div className="hidden md:block">
-                <div className="relative">
-                  <Search
-                    className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                    size={18}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Search for products..."
-                    className="pl-10 pr-4 py-2 bg-gray-100 rounded-full w-64"
-                  />
-                </div>
-              </div>
-              <button className="p-2">
-                <ShoppingCart size={20} />
-              </button>
-              <button className="p-2">
-                <User size={20} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+    <div>
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex items-center text-sm text-gray-500">
@@ -358,10 +293,10 @@ export default function CategoryPage() {
         </div>
       </div>
 
-      {/* Main Content - FIXED RESPONSIVE LAYOUT */}
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Desktop Filters - FIXED */}
+          {/* Desktop Filters */}
           <div className="hidden lg:block w-full lg:w-[295px] lg:sticky lg:top-24 lg:self-start">
             <FilterSection />
           </div>
@@ -383,11 +318,19 @@ export default function CategoryPage() {
             </div>
           )}
 
-          {/* Products Grid - FIXED */}
+          {/* Products Grid */}
           <div className="flex-1 w-full lg:w-auto">
-            {/* Header - FIXED */}
+            {/* Header */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
-              <h1 className="text-2xl sm:text-3xl font-bold">Casual</h1>
+              <div className="flex items-center gap-4 w-full sm:w-auto">
+                <button
+                  onClick={() => setShowMobileFilters(true)}
+                  className="lg:hidden p-2 border border-gray-200 rounded-lg"
+                >
+                  <SlidersHorizontal size={20} />
+                </button>
+                <h1 className="text-2xl sm:text-3xl font-bold">Casual</h1>
+              </div>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 text-xs sm:text-sm text-gray-600 w-full sm:w-auto">
                 <span className="whitespace-nowrap">
                   Showing 1-10 of 100 Products
@@ -403,7 +346,7 @@ export default function CategoryPage() {
               </div>
             </div>
 
-            {/* Products Grid - FIXED */}
+            {/* Products Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
               {products.map((product) => (
                 <div
@@ -449,7 +392,7 @@ export default function CategoryPage() {
               ))}
             </div>
 
-            {/* Pagination - FIXED */}
+            {/* Pagination */}
             <div className="flex flex-col sm:flex-row items-center justify-between mt-8 pt-8 border-t border-gray-200 gap-4">
               <button className="flex items-center gap-2 px-3 py-2 sm:px-4 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 w-full sm:w-auto justify-center">
                 <ChevronLeft size={18} />
@@ -475,7 +418,6 @@ export default function CategoryPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

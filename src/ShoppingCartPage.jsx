@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { ShoppingCart, Search, User, Menu, X, Trash2, Tag } from "lucide-react";
-
-import { useNavigate, Link } from "react-router-dom";
-import Footer from "./Footer";
+import { Trash2, Tag } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ShoppingCartPage() {
   const [cartItems, setCartItems] = useState([
@@ -60,52 +58,20 @@ export default function ShoppingCartPage() {
   const total = subtotal - discount + deliveryFee;
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-black text-white text-center py-2 px-4 text-sm">
-        Sign up and get 20% off to your first order.{" "}
-        <span className="underline cursor-pointer">Sign Up Now</span>
-        <button className="absolute right-4 top-2 md:top-2">
-          <X size={16} />
-        </button>
-      </div>
-
-      <header className="border-b px-4 md:px-8 py-4">
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Menu className="md:hidden" size={24} />
-            <h1 className="text-2xl md:text-3xl font-bold">SHOP.CO</h1>
-          </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <button className="flex items-center gap-1">
-              Shop <span className="text-xs">▼</span>
-            </button>
-            <a href="#" className="hover:underline">
-              On Sale
-            </a>
-            <a href="#" className="hover:underline">
-              New Arrivals
-            </a>
-            <a href="#" className="hover:underline">
-              Brands
-            </a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Search size={20} />
-            <ShoppingCart size={20} />
-            <User size={20} />
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-[1440px] mx-auto px-4 md:px-8 py-6 md:py-8">
-        <div className="text-sm text-gray-600 mb-6">
+    <div>
+      {/* Breadcrumb */}
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 py-4">
+        <div className="text-sm text-gray-600">
           <Link to="/" className="hover:text-black">
             Home
           </Link>{" "}
           <span className="mx-2">›</span>{" "}
           <span className="text-black">Cart</span>
         </div>
+      </div>
 
+      {/* Main Content */}
+      <main className="max-w-[1440px] mx-auto px-4 md:px-8 py-6 md:py-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">
           YOUR CART
         </h2>
@@ -209,7 +175,6 @@ export default function ShoppingCartPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
