@@ -15,7 +15,7 @@ export default function ShoppingCartPage() {
       color: "White",
       price: 145,
       quantity: 1,
-      image: "src/Images/d-5.png",
+      image: "/Images/d-5.png",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function ShoppingCartPage() {
       color: "Red",
       price: 180,
       quantity: 1,
-      image: "src/Images/card-2.png",
+      image: "/Images/card-2.png",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function ShoppingCartPage() {
       color: "Blue",
       price: 240,
       quantity: 1,
-      image: "src/Images/card-1.png",
+      image: "/Images/card-1.png",
     },
   ]);
 

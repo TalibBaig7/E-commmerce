@@ -7,26 +7,26 @@ function Card() {
   const products = [
     {
       name: "T-shirt with Tape Details",
-      image: "src/Images/Detail.png",
+      image: "/Images/Detail.png",
       price: "$120",
       rating: 4.5,
     },
     {
       name: "Skinny Fit Jeans",
-      image: "src/Images/card-1.png",
+      image: "/Images/card-1.png",
       price: "$240",
       oldPrice: "$260",
       rating: 3.5,
     },
     {
       name: "Checkered Shirt",
-      image: "src/Images/card-2.png",
+      image: "/Images/card-2.png",
       price: "$180",
       rating: 4.5,
     },
     {
       name: "Sleeve Striped T-shirt",
-      image: "src/Images/card-3.png",
+      image: "/Images/card-3.png",
       price: "$130",
       oldPrice: "$160",
       rating: 4.5,

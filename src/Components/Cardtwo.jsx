@@ -6,26 +6,26 @@ function Cardtwo() {
   const products = [
     {
       name: "Vertical Striped Shirt",
-      image: "src/Images/card-4.png",
+      image: "/Images/card-4.png",
       price: "$212",
       oldPrice: "$232",
       rating: 5.0,
     },
     {
       name: "Courage Graphic T-shirt",
-      image: "src/Images/card-5.png",
+      image: "/Images/card-5.png",
       price: "$145",
       rating: 4.0,
     },
     {
       name: "Loose Fit Bermuda Shorts",
-      image: "src/Images/card-6.png",
+      image: "/Images/card-6.png",
       price: "$80",
       rating: 3.0,
     },
     {
       name: "Faded Skinny Jeans",
-      image: "src/Images/card-7.png",
+      image: "/Images/card-7.png",
       price: "$210",
       rating: 4.5,
     },

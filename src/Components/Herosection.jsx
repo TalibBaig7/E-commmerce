@@ -54,7 +54,7 @@ function HeroSection() {
 
           <div className="relative h-full w-full flex items-center justify-center order-1 md:order-2">
             <img
-              src="src/Images/Home.png.jpg"
+              src="/Images/Home.png.jpg"
               alt="Fashion models"
               className="w-full h-auto max-h-[300px] md:max-h-[500px] lg:max-h-[600px] object-contain"
             />

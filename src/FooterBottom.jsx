@@ -11,27 +11,27 @@ function FooterBottom() {
 
           <div className="flex gap-2 md:gap-3 flex-wrap justify-center">
             <img
-              src="src/Images/visa.png"
+              src="/Images/Visa.png"
               alt="Visa"
               className="h-[26px] w-[42px] md:h-[30px] md:w-[47px] object-contain"
             />
             <img
-              src="src/Images/mastercard.png"
+              src="/Images/Mastercard.png"
               alt="Mastercard"
               className="h-[26px] w-[42px] md:h-[30px] md:w-[47px] object-contain"
             />
             <img
-              src="src/Images/paypal.png"
+              src="/Images/Paypal.png"
               alt="PayPal"
               className="h-[26px] w-[42px] md:h-[30px] md:w-[47px] object-contain"
             />
             <img
-              src="src/Images/ Pay.png"
+              src="/Images/apple-pay.png"
               alt="Apple Pay"
               className="h-[26px] w-[42px] md:h-[30px] md:w-[47px] object-contain"
             />
             <img
-              src="src/Images/G Pay.png"
+              src="/Images/google-pay.png"
               alt="Google Pay"
               className="h-[26px] w-[42px] md:h-[30px] md:w-[47px] object-contain"
             />

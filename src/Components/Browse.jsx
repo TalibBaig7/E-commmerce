@@ -1,16 +1,16 @@
 function Browse() {
   const categories = [
     {
-      image: "src/Images/hero-1.png",
+      image: "/Images/hero-1.png",
     },
     {
-      image: "src/Images/hero-2.png",
+      image: "/Images/hero-2.png",
     },
     {
-      image: "src/Images/hero-3.png",
+      image: "/Images/hero-3.png",
     },
     {
-      image: "src/Images/hero-4.png",
+      image: "/Images/hero-4.png",
     },
   ];
 

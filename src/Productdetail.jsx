@@ -82,23 +82,23 @@ export default function ProductDetailPage() {
       name: "Polo with Contrast Trims",
       price: 212,
       oldPrice: 242,
-      image: "src/Images/d-4.png",
+      image: "/Images/d-4.png",
     },
     {
       name: "Gradient Graphic T-shirt",
       price: 145,
-      image: "src/Images/d-5.png",
+      image: "/Images/d-5.png",
     },
     {
       name: "Polo with Tipping Details",
       price: 180,
-      image: "src/Images/d-6.png",
+      image: "/Images/d-6.png",
     },
     {
       name: "Black Striped T-shirt",
       price: 120,
       oldPrice: 160,
-      image: "src/Images/d-7.png",
+      image: "/Images/d-7.png",
     },
   ];
 
