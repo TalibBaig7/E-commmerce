@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: shopco
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+```
+
+4. **Save the file** (Ctrl+S or Cmd+S)
+
+Your folder structure should now look like:
+```
+your-project/
+├── src/
+├── public/
+├── package.json
+├── render.yaml  ← NEW FILE HERE
+└── ...
