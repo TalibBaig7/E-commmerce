@@ -19,7 +19,7 @@ export default function ProductDetailPage() {
   const [activeTab, setActiveTab] = useState("details");
 
   const images = [
-    "src/Images/d-3.png",
+    "/Images/d-3.png",
     "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400",
     "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400",
   ];

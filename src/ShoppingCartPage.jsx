@@ -1,10 +1,8 @@
-
 import React, { useState } from "react";
 import { ShoppingCart, Search, User, Menu, X, Trash2, Tag } from "lucide-react";
 
 import { useNavigate, Link } from "react-router-dom";
 import Footer from "./Footer";
-
 
 export default function ShoppingCartPage() {
   const [cartItems, setCartItems] = useState([
@@ -63,14 +61,12 @@ export default function ShoppingCartPage() {
 
   return (
     <div className="min-h-screen bg-white">
-
       <div className="bg-black text-white text-center py-2 px-4 text-sm">
         Sign up and get 20% off to your first order.{" "}
         <span className="underline cursor-pointer">Sign Up Now</span>
         <button className="absolute right-4 top-2 md:top-2">
           <X size={16} />
         </button>
-
       </div>
 
       <header className="border-b px-4 md:px-8 py-4">
@@ -188,18 +184,19 @@ export default function ShoppingCartPage() {
                 </div>
               </div>
 
-              <div className="flex gap-3">
-                <div className="flex-1 flex items-center gap-2 border rounded-full px-4 py-3">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+                <div className="flex flex-1 items-center gap-2 border rounded-full px-4 py-3">
                   <Tag size={20} className="text-gray-400" />
                   <input
                     type="text"
                     placeholder="Add promo code"
                     value={promoCode}
                     onChange={(e) => setPromoCode(e.target.value)}
-                    className="flex-1 outline-none text-sm"
+                    className="w-full outline-none text-sm"
                   />
                 </div>
-                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800">
+
+                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 sm:whitespace-nowrap w-full sm:w-auto">
                   Apply
                 </button>
               </div>
@@ -209,13 +206,10 @@ export default function ShoppingCartPage() {
                 <span>→</span>
               </button>
             </div>
-           
-
           </div>
         </div>
       </main>
       <Footer />
     </div>
-    
   );
 }
