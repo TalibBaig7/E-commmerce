@@ -24,7 +24,7 @@ function Browse() {
         <div className="hidden md:block space-y-5">
           <div className="grid grid-cols-3 gap-5">
             <div
-              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-1"
+              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-1 shadow-lg border-2"
               style={{ height: "289px" }}
             >
               <h3 className="absolute top-8 left-8 text-4xl font-bold z-10">
@@ -42,7 +42,7 @@ function Browse() {
             </div>
 
             <div
-              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-2"
+              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-2 shadow-lg border-2"
               style={{ height: "289px" }}
             >
               <h3 className="absolute top-8 left-8 text-4xl font-bold z-10">
@@ -62,7 +62,7 @@ function Browse() {
 
           <div className="grid grid-cols-3 gap-5">
             <div
-              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-2"
+              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-2 shadow-lg border-2"
               style={{ height: "289px" }}
             >
               <h3 className="absolute top-8 left-8 text-4xl font-bold z-10">
@@ -80,7 +80,7 @@ function Browse() {
             </div>
 
             <div
-              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-1"
+              className="relative bg-white rounded-[40px] overflow-hidden group cursor-pointer col-span-1 shadow-lg border-2"
               style={{ height: "289px" }}
             >
               <h3 className="absolute top-8 left-8 text-4xl font-bold z-10">

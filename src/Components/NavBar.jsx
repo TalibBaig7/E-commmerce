@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,7 +8,6 @@ function NavBar() {
     <header className="w-full bg-white border-b border-gray-200">
       <div className="w-full px-4 md:px-6 lg:px-16 md:max-w-[1440px] md:mx-auto">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -27,14 +27,14 @@ function NavBar() {
             </svg>
           </button>
 
-          {/* Logo */}
-          <h1 className="font-extrabold text-xl md:text-2xl lg:text-3xl">
-            SHOP.CO
-          </h1>
+          <Link to="/">
+            <h1 className="font-extrabold text-xl md:text-2xl lg:text-3xl cursor-pointer hover:opacity-80 transition">
+              SHOP.CO
+            </h1>
+          </Link>
 
-          {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-4 lg:gap-6 text-gray-700 font-medium text-sm lg:text-base">
-            <li className="flex items-center gap-1 cursor-pointer hover:text-black">
+            <li className="flex items-center gap-1 cursor-pointer hover:text-black transition">
               <span>Shop</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,12 +48,17 @@ function NavBar() {
                 />
               </svg>
             </li>
-            <li className="cursor-pointer hover:text-black">On Sale</li>
-            <li className="cursor-pointer hover:text-black">New Arrivals</li>
-            <li className="cursor-pointer hover:text-black">Brands</li>
+            <li className="cursor-pointer hover:text-black transition">
+              On Sale
+            </li>
+            <li className="cursor-pointer hover:text-black transition">
+              New Arrivals
+            </li>
+            <li className="cursor-pointer hover:text-black transition">
+              Brands
+            </li>
           </ul>
 
-          {/* Search Bar - Desktop */}
           <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 w-full max-w-[300px] lg:max-w-[500px] h-10 lg:h-12 mx-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,15 +79,13 @@ function NavBar() {
             />
           </div>
 
-          {/* Icons */}
           <div className="flex items-center gap-3 md:gap-4 lg:gap-6 text-gray-800">
-            {/* Search Icon - Mobile */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="20"
               viewBox="0 0 24 24"
-              className="md:hidden cursor-pointer"
+              className="md:hidden cursor-pointer hover:opacity-70 transition"
             >
               <path
                 fill="currentColor"
@@ -90,39 +93,40 @@ function NavBar() {
               />
             </svg>
 
-            {/* Cart */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              className="cursor-pointer md:w-[22px] md:h-[22px]"
-            >
-              <path
-                fill="currentColor"
-                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.99 1.99 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921M17.307 15h-6.64l-2.5-6h11.39z"
-              />
-              <circle cx="10.5" cy="19.5" r="1.5" fill="currentColor" />
-              <circle cx="17.5" cy="19.5" r="1.5" fill="currentColor" />
-            </svg>
+            <Link to="/cart" className="hover:opacity-70 transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                className="cursor-pointer md:w-[22px] md:h-[22px]"
+              >
+                <path
+                  fill="currentColor"
+                  d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.99 1.99 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921M17.307 15h-6.64l-2.5-6h11.39z"
+                />
+                <circle cx="10.5" cy="19.5" r="1.5" fill="currentColor" />
+                <circle cx="17.5" cy="19.5" r="1.5" fill="currentColor" />
+              </svg>
+            </Link>
 
-            {/* User */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              className="cursor-pointer md:w-[22px] md:h-[22px]"
-            >
-              <path
-                fill="currentColor"
-                d="M12 2a10 10 0 1 1 0 20a10 10 0 0 1 0-20m0 15c-1.86 0-3.54.59-4.79 1.41A7.97 7.97 0 0 0 12 20a7.97 7.97 0 0 0 4.79-1.59A8.9 8.9 0 0 0 12 17m0-13a8 8 0 0 0-6.26 13A8 8 0 1 0 18.26 4A8 8 0 0 0 12 4m0 2a4 4 0 1 1 0 8a4 4 0 0 1 0-8"
-              />
-            </svg>
+            <Link to="/signup" className="hover:opacity-70 transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                className="cursor-pointer md:w-[22px] md:h-[22px]"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2a10 10 0 1 1 0 20a10 10 0 0 1 0-20m0 15c-1.86 0-3.54.59-4.79 1.41A7.97 7.97 0 0 0 12 20a7.97 7.97 0 0 0 4.79-1.59A8.9 8.9 0 0 0 12 17m0-13a8 8 0 0 0-6.26 13A8 8 0 1 0 18.26 4A8 8 0 0 0 12 4m0 2a4 4 0 1 1 0 8a4 4 0 0 1 0-8"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-200 py-4">
             <ul className="flex flex-col gap-4 text-gray-700 font-medium">
@@ -130,8 +134,11 @@ function NavBar() {
               <li className="cursor-pointer hover:text-black">On Sale</li>
               <li className="cursor-pointer hover:text-black">New Arrivals</li>
               <li className="cursor-pointer hover:text-black">Brands</li>
+              <Link to="/signup">
+                <li className="cursor-pointer hover:text-black">Sign Up</li>
+              </Link>
             </ul>
-            {/* Mobile Search */}
+
             <div className="flex items-center bg-gray-100 rounded-full px-4 h-10 mt-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -157,4 +164,5 @@ function NavBar() {
     </header>
   );
 }
+
 export default NavBar;

@@ -152,7 +152,7 @@ export default function CategoryPage() {
         <SlidersHorizontal size={20} className="hidden lg:block" />
       </div>
 
-      {/* Categories */}
+     
       <div className="border-b border-gray-200 pb-5 mb-5">
         {categories.map((cat) => (
           <div
@@ -165,7 +165,7 @@ export default function CategoryPage() {
         ))}
       </div>
 
-      {/* Price */}
+  
       <div className="border-b border-gray-200 pb-5 mb-5">
         <button
           onClick={() => toggleSection("price")}
@@ -190,7 +190,7 @@ export default function CategoryPage() {
         )}
       </div>
 
-      {/* Colors */}
+
       <div className="border-b border-gray-200 pb-5 mb-5">
         <button
           onClick={() => toggleSection("colors")}
@@ -217,7 +217,7 @@ export default function CategoryPage() {
         )}
       </div>
 
-      {/* Size */}
+
       <div className="border-b border-gray-200 pb-5 mb-5">
         <button
           onClick={() => toggleSection("size")}
@@ -245,7 +245,7 @@ export default function CategoryPage() {
         )}
       </div>
 
-      {/* Dress Style */}
+    
       <div className="pb-5">
         <button
           onClick={() => toggleSection("style")}
@@ -282,7 +282,7 @@ export default function CategoryPage() {
 
   return (
     <div>
-      {/* Breadcrumb */}
+   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex items-center text-sm text-gray-500">
           <Link to="/" className="hover:text-black">
@@ -293,15 +293,15 @@ export default function CategoryPage() {
         </div>
       </div>
 
-      {/* Main Content */}
+     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Desktop Filters */}
+       
           <div className="hidden lg:block w-full lg:w-[295px] lg:sticky lg:top-24 lg:self-start">
             <FilterSection />
           </div>
 
-          {/* Mobile Filters */}
+         
           {showMobileFilters && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden"
@@ -318,9 +318,9 @@ export default function CategoryPage() {
             </div>
           )}
 
-          {/* Products Grid */}
+       
           <div className="flex-1 w-full lg:w-auto">
-            {/* Header */}
+      
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <button
@@ -346,7 +346,7 @@ export default function CategoryPage() {
               </div>
             </div>
 
-            {/* Products Grid */}
+        
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
               {products.map((product) => (
                 <div
@@ -392,7 +392,7 @@ export default function CategoryPage() {
               ))}
             </div>
 
-            {/* Pagination */}
+      
             <div className="flex flex-col sm:flex-row items-center justify-between mt-8 pt-8 border-t border-gray-200 gap-4">
               <button className="flex items-center gap-2 px-3 py-2 sm:px-4 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 w-full sm:w-auto justify-center">
                 <ChevronLeft size={18} />

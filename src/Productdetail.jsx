@@ -103,7 +103,7 @@ export default function ProductDetailPage() {
 
   return (
     <div>
-      {/* Breadcrumb */}
+  
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center text-sm text-gray-500">
           <Link to="/" className="hover:text-black">
@@ -122,7 +122,7 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
-      {/* Product Details */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="flex gap-4">
@@ -244,7 +244,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        {/* Reviews Section */}
+  
         <div className="mt-16">
           <div className="border-b border-gray-200">
             <div className="flex gap-8">
