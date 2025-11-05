@@ -41,7 +41,7 @@ function TestimonialsSection() {
       verified: true,
     },
     {
-      name: "Michael T.",
+      name: "Peter S.",
       rating: 5,
       review:
         "I'm always hesitant about buying online, but the quality of the fabric and construction from Shop.co is top-tier. My items have held up perfectly after multiple washes. Excellent value for money.",
