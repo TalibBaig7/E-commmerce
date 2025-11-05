@@ -64,7 +64,7 @@ function TestimonialsSection() {
         direction === "left"
           ? container.scrollLeft - scrollAmount
           : container.scrollLeft + scrollAmount;
-
+ 
       container.scrollTo({
         left: newPosition,
         behavior: "smooth",
@@ -104,7 +104,7 @@ function TestimonialsSection() {
         {testimonials.map((item, index) => (
           <div
             key={index}
-            className="bg-white border-black/10 rounded-[20px] shrink-0 p-6 md:p-8 shadow-2xl border-0"
+            className="bg-white border-black/10 rounded-[20px] shrink-0 p-6 md:p-8 shadow-2xl border-2"
             style={{
               width: "320px",
               minWidth: "320px",
